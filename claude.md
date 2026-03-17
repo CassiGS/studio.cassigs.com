@@ -46,16 +46,9 @@ All design tokens are defined in `src/styles/global.css` under `:root`. Always u
 
 ```css
 :root {
-  --navy: #1c2b4a;
-  --navy-mid: #2e4270;
-  --blue-rule: #4a6fa5;
-  --blue-tint: #eef2f8;
-  --off-white: #f4f1ea;
-  --warm-white: #faf8f3;
-  --ink: #1c2b4a;
-  --ink-mid: #3d4f6e;
-  --ink-muted: #7a8aaa;
-  --ink-faint: #b8c2d4;
+  --primary-color: #2a2a28;
+  --secondary-color: #50504d;
+  --background-color: #fffffd;
   --rule: rgba(74, 111, 165, 0.13);
   --rule-strong: rgba(74, 111, 165, 0.28);
   --font-serif: "Cormorant Garamond", Georgia, serif;
