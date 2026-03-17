@@ -5,6 +5,16 @@
   margin: 0 auto;
 }
 
+.smallHeader {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
 /* ── Two-column layout ─────────────────────────────────── */
 
 .grid {
@@ -20,16 +30,6 @@
 }
 
 /* ── Blog feed (left) ──────────────────────────────────── */
-
-.feedHeader {
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--secondary-color);
-  margin-bottom: 2rem;
-}
 
 .feed {
   display: flex;
@@ -72,8 +72,8 @@
 
 .postTitle {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.75rem;
+  font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
   line-height: 1.25;
@@ -99,15 +99,6 @@
   border: 0.5px solid var(--rule-strong);
 }
 
-.aboutHeader {
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--secondary-color);
-  margin-bottom: 1.25rem;
-}
 
 .aboutText {
   font-family: var(--font-serif);

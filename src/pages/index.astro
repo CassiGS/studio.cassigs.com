@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css'
 import styles from './index.module.css'
+import Header from '../components/Header.astro'
 
 const mockPosts = [
   {
@@ -39,12 +40,13 @@ const mockPosts = [
     <title>Studio — Cassigs</title>
   </head>
   <body>
+    <Header />
     <main class={styles.page}>
       <div class={styles.grid}>
 
         <!-- Left: blog feed -->
         <section>
-          <p class={styles.feedHeader}>Recent writing</p>
+          <p class={styles.smallHeader}>Recent writing</p>
           <div class={styles.feed}>
             {mockPosts.map((post) => (
               <article class={styles.postCard}>
@@ -62,7 +64,7 @@ const mockPosts = [
         <!-- Right: sidebar -->
         <aside class={styles.sidebar}>
           <div class={styles.aboutSection}>
-            <p class={styles.aboutHeader}>About the Studio</p>
+            <p class={styles.smallHeader}>About the Studio</p>
             <p class={styles.aboutText}>
               A working studio for research, illustration, and data visualisation.
               The focus is on making complex information precise and readable —
