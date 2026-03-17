@@ -47,7 +47,7 @@ All design tokens are defined in `src/styles/global.css` under `:root`. Always u
 ```css
 :root {
   --primary-color: #2a2a28;
-  --secondary-color: #50504d;
+  --secondary-color: #4a4a46;
   --background-color: #fffffd;
   --rule: rgba(74, 111, 165, 0.13);
   --rule-strong: rgba(74, 111, 165, 0.28);
