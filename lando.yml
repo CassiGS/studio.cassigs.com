@@ -1,0 +1,11 @@
+name: cassigs-studio
+recipe: wordpress
+config:
+  php: 8.3
+  composer_version: 2
+  webroot: .
+  database: mysql
+  cache: redis
+  ssl: false
+  via: nginx
+  xdebug: true
