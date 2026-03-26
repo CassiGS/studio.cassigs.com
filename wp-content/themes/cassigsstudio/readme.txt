@@ -1,0 +1,82 @@
+=== Indice ===
+
+Contributors: Automattic
+Requires at least: 6.8
+Tested up to: 6.8
+Requires PHP: 7.2
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+== Description ==
+
+Indice is a tribute to the iconic indexhibit, an archetypal open source CMS that was heavily used by a generation of designers in the early web due to its simplicity and charm.
+
+== Changelog ==
+
+= 1.0.9 =
+* Removed x-small font size
+
+= 1.0.8 =
+* Update to 1.0.8
+
+= 1.0.7 =
+* Made the title react when hovering the featured image in the page gallery template.
+
+= 1.0.6 =
+* Fixed typo (#156728)
+
+= 1.0.5 =
+* Update archive template to add no result block (#8336)
+* Update Footer (#8337)
+* Update Index template (#8338)
+* Update Search Results Page to add main tag (#8339)
+* Update Gallery Page template (#8340)
+* Update Single Post template (#8341)
+* Update Gallery Page template
+* Revert Update Gallery Page template
+* Remove unnecessary spacer from gallery page template (#8342)
+* Update 404 page template, remove unnecessary patterns (#8343)
+* Update templates with query loop block (#8344)
+* Remove unnecessary wide width (#8345)
+* Cleanup readme and stylesheet (#8346)
+
+= 1.0.4 =
+* Indice: Fix a wrong tag (#8088)
+
+= 1.0.3 =
+* Lossless image optimization (#7671)
+
+= 1.0.3 =
+* Optimize images (#7671)
+
+= 1.0.2 =
+* Indice: Make the footer is always at the bottom of the viewport (#7594)
+
+= 1.0.1 =
+* Indice: Add strict types to remaining php files (#7547)
+
+= 1.0.0 =
+* Initial release
+
+== Copyright ==
+
+Indice WordPress Theme, (C) 2023
+Indice is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+Inter Font
+Licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)
+https://fonts.google.com/specimen/Inter
+
+IBM Plex Mono Font
+Licensed under SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)
+https://fonts.google.com/specimen/IBM+Plex+Mono
