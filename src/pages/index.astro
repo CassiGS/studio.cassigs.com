@@ -4,11 +4,25 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<div class="grid">
-		<section class="main-col"></section>
+		<section class="main-col">
+			<article class="blog-card">
+				<div class="feature-image"></div>
+				<div class="blog-card-body">
+					<div class="tags">
+						<span class="tag">Design</span>
+						<span class="tag">Studio</span>
+					</div>
+					<h2>Placeholder Blog Post Title Goes Here</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+					<a class="link" href="#">Read More</a>
+				</div>
+			</article>
+		</section>
 		<aside class="side-col">
 			<div class="about-box">
 				<h3>About The Studio</h3>
 				<p>Placeholder text about the studio. More details coming soon.</p>
+				<a class="link" href="#">Read Full Bio</a>
 			</div>
 		</aside>
 	</div>
@@ -42,6 +56,56 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.about-box p {
+		font-size: var(--font-size-2);
+		font-weight: 200;
+		line-height: 1.6;
+	}
+
+	.about-box a {
+		color: var(--color-cream);
+		background-color: var(--color-link);
+		font-family: var(--font-body);
+		font-size: var(--font-size-1);
+		font-weight: 300;
+		padding: 0.25rem var(--space-1);
+		text-transform: uppercase;
+	}
+
+	.blog-card {
+		border: 1px solid var(--color-black);
+		padding: var(--space-2);
+	}
+
+	.feature-image {
+		width: 100%;
+		aspect-ratio: 16 / 9;
+		background-color: #C0C0C0;
+		margin-bottom: var(--space-2);
+	}
+
+	.tags {
+		display: flex;
+		gap: var(--space-1);
+		margin-bottom: var(--space-1);
+	}
+
+	.tag {
+		background-color: var(--color-accent);
+		font-family: var(--font-body);
+		font-size: var(--font-size-1);
+		font-weight: 300;
+		padding: 0.25rem var(--space-1);
+		text-transform: uppercase;
+	}
+
+	.blog-card-body h2 {
+		font-family: var(--font-body);
+		font-size: var(--font-size-4);
+		font-weight: 300;
+		margin-bottom: var(--space-1);
+	}
+
+	.blog-card-body p {
 		font-size: var(--font-size-2);
 		font-weight: 200;
 		line-height: 1.6;
