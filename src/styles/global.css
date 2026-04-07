@@ -97,3 +97,9 @@ body {
 	background-color: var(--color-cream);
 	color: var(--color-black);
 }
+
+.container {
+	width: 90%;
+	max-width: 2400px;
+	margin: var(--space-3) auto 0;
+}
