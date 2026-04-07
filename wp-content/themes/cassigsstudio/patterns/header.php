@@ -11,7 +11,11 @@ declare( strict_types = 1 );
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group">
-	<!-- wp:site-title /-->
+	<!-- wp:site-title {"style":{"typography":{"fontSize":"var(--wp--preset--font-size--large)"}}} /-->
+
+	<!-- wp:paragraph  -->
+	<p>Hi, welcome to my studio. I'm Cassi an illustrator and artist. I also enjoy dabbling in fiber arts in my free time.</p>
+	<!-- /wp:paragraph -->
 
 	<!-- wp:spacer {"height":"36px"} -->
 	<div style="height:36px" aria-hidden="true" class="wp-block-spacer"></div>

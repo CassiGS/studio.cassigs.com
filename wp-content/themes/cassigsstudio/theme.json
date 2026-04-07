@@ -43,7 +43,8 @@
 			]
 		},
 		"layout": {
-			"contentSize": "88vw"
+			"contentSize": "88vw",
+			"wideSize": "1160px"
 		},
 		"spacing": {
 			"units": [
@@ -404,7 +405,7 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--small)",
+					"fontSize": "var(--wp--preset--font-size--medium)",
 					"lineHeight": "1.6"
 				}
 			},

@@ -19,6 +19,13 @@ Tags: blog, portfolio, two-columns, block-styles, featured-images, full-site-edi
  * Unnecessary once block styles are configurable via theme.json
  * https://github.com/WordPress/gutenberg/issues/42794
  */
+/* Constrain home layout to wide-size with centered alignment */
+.wp-site-blocks {
+	max-width: var(--wp--style--global--wide-size);
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background):hover {
 	background-color: var(--wp--preset--color--primary);
 	border-color: var(--wp--preset--color--primary);
