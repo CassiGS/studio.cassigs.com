@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -13,7 +14,7 @@ import Header from '../components/Header.astro';
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;700&display=swap" rel="stylesheet" />
 		<title>Astro Basics</title>
 	</head>
 	<body>
@@ -21,5 +22,6 @@ import Header from '../components/Header.astro';
 		<main class="container">
 			<slot />
 		</main>
+		<Footer />
 	</body>
 </html>

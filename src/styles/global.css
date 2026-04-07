@@ -66,8 +66,9 @@ a {
 :root {
 	--color-cream: #EAE1CB;
 	--color-black: #2A2A2A;
+	--color-green: #979E6C;
 
-	--font-header: 'Geologica', sans-serif;
+	--font-body: 'Geologica', sans-serif;
 
 	--font-size-1: 0.5rem;   /* 8px */
 	--font-size-2: 1rem;     /* 16px */
@@ -90,16 +91,22 @@ a {
    Base
    ================================ */
 
-html,
-body {
-	width: 100%;
+html {
 	height: 100%;
+}
+
+body {
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
 	background-color: var(--color-cream);
 	color: var(--color-black);
+	font-family: var(--font-body);
 }
 
 .container {
+	flex: 1;
 	width: 90%;
-	max-width: 2400px;
+	max-width: 1400px;
 	margin: var(--space-3) auto 0;
 }

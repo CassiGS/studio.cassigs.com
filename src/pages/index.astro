@@ -1,11 +1,59 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	
+	<div class="grid">
+		<section class="main-col"></section>
+		<aside class="side-col">
+			<div class="about-box">
+				<h3>About The Studio</h3>
+				<p>Placeholder text about the studio. More details coming soon.</p>
+			</div>
+		</aside>
+	</div>
 </Layout>
+
+<style>
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--space-3);
+		padding: var(--space-3) 0;
+	}
+
+	.side-col {
+		order: -1;
+	}
+
+	.about-box {
+		background-color: var(--color-green);
+		padding: var(--space-2);
+		display: inline-block;
+		width: 100%;
+	}
+
+	.about-box h3 {
+		font-family: var(--font-body);
+		font-size: var(--font-size-2);
+		font-weight: 300;
+		margin-bottom: var(--space-1);
+		text-transform: uppercase;
+	}
+
+	.about-box p {
+		font-size: var(--font-size-2);
+		font-weight: 200;
+		line-height: 1.6;
+	}
+
+	@media (min-width: 768px) {
+		.grid {
+			grid-template-columns: 3fr 1fr;
+		}
+
+		.side-col {
+			order: 0;
+		}
+	}
+</style>
