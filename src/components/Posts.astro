@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import Post from "@/components/Post.astro";
+import Post from "./Post.astro";
 
 const posts = (await getCollection("posts")).sort(
   (a, b) => b.data.publicationDate.valueOf() - a.data.publicationDate.valueOf(),

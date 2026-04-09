@@ -2,7 +2,7 @@ import type {
   SiteConfiguration,
   NavigationLinks,
   SocialLinks,
-} from "@/types.ts";
+} from "./types.ts";
 
 export const SITE: SiteConfiguration = {
   title: "Barebones",
