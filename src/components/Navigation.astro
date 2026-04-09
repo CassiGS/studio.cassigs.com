@@ -35,7 +35,6 @@ import { NAV_LINKS, SITE } from "../siteConfig.ts";
       align-items: flex-start;
       justify-content: flex-start;
       flex-shrink: 0;
-      width: 160px;
       padding: 1.5rem 1rem;
       gap: 1.5rem;
       position: sticky;
@@ -44,11 +43,13 @@ import { NAV_LINKS, SITE } from "../siteConfig.ts";
     }
   }
   .site-title {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 3rem;
+    line-height: 3.25rem;
     font-weight: 600;
     color: #000;
     text-decoration: none;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
   }
   :global(.dark) .site-title {
     color: #fff;

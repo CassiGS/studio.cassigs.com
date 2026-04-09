@@ -9,12 +9,19 @@
   --color-dark-link: oklch(73.9% 0.1387 282.47);
   --color-dark-muted-text: #d4d4d4;
   --font-sans: var(--font-geist, ui-sans-serif, system-ui, sans-serif);
+  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Montagu Slab", Georgia, serif;
 }
+
 .dark {
   color-scheme: dark;
 }
 .light {
   color-scheme: light;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
 .link,

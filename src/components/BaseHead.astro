@@ -35,6 +35,12 @@ import Favicons from "./Favicons.astro";
     href={new URL("rss.xml", SITE.href || Astro.url.origin)}
   />
   <Favicons />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montagu+Slab:opsz,wght@16..144,100..700&display=swap"
+  />
   <script is:inline>
     const theme = localStorage.getItem("currentTheme") || "system";
     const prefersDark = window.matchMedia(

@@ -27,7 +27,7 @@ import Navigation from "../components/Navigation.astro";
 <style is:global>
   body {
     background-color: var(--color-bg);
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
   }
   .dark body {
     background-color: var(--color-dark-bg);
@@ -45,7 +45,7 @@ import Navigation from "../components/Navigation.astro";
   @media (min-width: 640px) {
     .app-layout {
       display: grid;
-      grid-template-columns: 160px 1fr;
+      grid-template-columns: 1fr 2fr;
       gap: 5rem;
       min-height: 100vh;
     }
