@@ -5,10 +5,10 @@ import ExternalLink from "@/components/ExternalLink.astro";
 ---
 
 <section>
-  <div class="prose dark:prose-invert prose-neutral mb-3">
+  <div class="prose dark:prose-invert prose-neutral section-heading">
     <h2>Contact</h2>
   </div>
-  <ul class="grid list-none gap-4 p-0">
+  <ul class="social-list">
     {
       Object.values(SOCIAL_LINKS).map((socialLink) => {
         return (
@@ -18,3 +18,16 @@ import ExternalLink from "@/components/ExternalLink.astro";
     }
   </ul>
 </section>
+
+<style>
+  .section-heading {
+    margin-bottom: 0.75rem;
+  }
+  .social-list {
+    display: grid;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+</style>

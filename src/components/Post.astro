@@ -10,13 +10,35 @@ const { post } = Astro.props;
 ---
 
 <li>
-  <a
-    href={`/posts/${post.id}`}
-    class="flex w-full flex-col sm:flex-row sm:items-center sm:justify-between"
-  >
+  <a href={`/posts/${post.id}`} class="post-link">
     <span class="link">{post.data.title}</span>
-    <div class="text-muted-text dark:text-dark-muted-text text-sm font-normal">
+    <div class="post-date">
       {formatDate(post.data.publicationDate)}
     </div>
   </a>
 </li>
+
+<style>
+  .post-link {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  @media (min-width: 640px) {
+    .post-link {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .post-date {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: var(--color-muted-text);
+  }
+  :global(.dark) .post-date {
+    color: var(--color-dark-muted-text);
+  }
+</style>

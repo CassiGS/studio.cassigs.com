@@ -32,26 +32,53 @@ const { Content } = await render(entry);
         <Image
           src={entry.data.image}
           alt={entry.data.imageAlt || ""}
-          class="mb-12 h-auto w-full"
+          class="post-image"
           draggable="false"
           loading="eager"
         />
       )
     }
-    <h1
-      class="text-[36px] leading-snug font-bold text-balance text-black dark:text-white"
-    >
+    <h1 class="post-title">
       {entry.data.title}
     </h1>
-    <p class="text-muted-text dark:text-dark-muted-text mt-3">
+    <p class="post-date">
       {formatDate(entry.data.publicationDate)}
     </p>
     <div class="prose dark:prose-invert prose-neutral">
-      <hr class="my-12" />
+      <hr class="post-divider" />
       <div>
         <Content />
       </div>
-      <hr class="my-12" />
+      <hr class="post-divider" />
     </div>
   </div>
 </BaseLayout>
+
+<style>
+  .post-image {
+    margin-bottom: 3rem;
+    height: auto;
+    width: 100%;
+  }
+  .post-title {
+    font-size: 36px;
+    line-height: 1.375;
+    font-weight: 700;
+    text-wrap: balance;
+    color: #000;
+  }
+  :global(.dark) .post-title {
+    color: #fff;
+  }
+  .post-date {
+    margin-top: 0.75rem;
+    color: var(--color-muted-text);
+  }
+  :global(.dark) .post-date {
+    color: var(--color-dark-muted-text);
+  }
+  .post-divider {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+</style>

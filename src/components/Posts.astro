@@ -8,10 +8,23 @@ const posts = (await getCollection("posts")).sort(
 ---
 
 <section>
-  <div class="prose dark:prose-invert prose-neutral mb-3">
+  <div class="prose dark:prose-invert prose-neutral section-heading">
     <h2>Posts</h2>
   </div>
-  <ul class="grid list-none gap-4 p-0">
+  <ul class="post-list">
     {posts.map((post) => <Post post={post} />)}
   </ul>
 </section>
+
+<style>
+  .section-heading {
+    margin-bottom: 0.75rem;
+  }
+  .post-list {
+    display: grid;
+    list-style: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+</style>

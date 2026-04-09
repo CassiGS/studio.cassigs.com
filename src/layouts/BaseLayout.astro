@@ -11,13 +11,40 @@ import Navigation from "../components/Navigation.astro";
   <BaseHead>
     <slot name="head" />
   </BaseHead>
-  <body class="bg-bg dark:bg-dark-bg font-sans">
+  <body>
     <Navigation />
-    <div class="mx-auto max-w-screen-sm p-3 sm:p-6">
-      <main class="min-h-[80vh]">
+    <div class="page-wrapper">
+      <main class="page-main">
         <slot />
       </main>
       <Footer />
     </div>
   </body>
 </html>
+
+<style is:global>
+  body {
+    background-color: var(--color-bg);
+    font-family: var(--font-sans);
+  }
+  .dark body {
+    background-color: var(--color-dark-bg);
+  }
+</style>
+
+<style>
+  .page-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 640px;
+    padding: 0.75rem;
+  }
+  @media (min-width: 640px) {
+    .page-wrapper {
+      padding: 1.5rem;
+    }
+  }
+  .page-main {
+    min-height: 80vh;
+  }
+</style>

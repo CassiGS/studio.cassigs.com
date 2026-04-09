@@ -1,7 +1,14 @@
-@import "./typography.css" layer(components);
+@import "./typography.css";
 
 :root {
   color-scheme: light dark;
+  --color-bg: #fafafa;
+  --color-link: oklch(46.97% 0.2734 267.56);
+  --color-muted-text: #404040;
+  --color-dark-bg: #0a0a0a;
+  --color-dark-link: oklch(73.9% 0.1387 282.47);
+  --color-dark-muted-text: #d4d4d4;
+  --font-sans: var(--font-geist, ui-sans-serif, system-ui, sans-serif);
 }
 .dark {
   color-scheme: dark;
@@ -10,49 +17,21 @@
   color-scheme: light;
 }
 
-@variant dark {
-  &:where(.dark, .dark *) {
-    @slot;
-  }
-  @media (prefers-color-scheme: dark) {
-    &:where(.system, .system *) {
-      @slot;
-    }
-  }
-}
-
-@theme {
-  --color-bg: var(--color-neutral-50);
-  --color-link: oklch(46.97% 0.2734 267.56);
-  --color-muted-text: var(--color-neutral-700);
-
-  --color-dark-bg: var(--color-neutral-950);
-  --color-dark-link: oklch(73.9% 0.1387 282.47);
-  --color-dark-muted-text: var(--color-neutral-300);
-}
-
-@theme inline {
-  --font-sans: var(--font-geist);
-}
-
-/* ensure .link and typography.css are consistent */
 .link,
 .prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   color: var(--color-link);
-  font-weight: var(--font-weight-semibold);
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: var(--color-link);
   text-decoration-thickness: 1px;
-  & code {
-    font-weight: var(--font-weight-semibold);
-  }
+}
+.link code {
+  font-weight: 600;
 }
 
 .dark .link,
-.dark
-  .prose
-  :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+.dark .prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   color: var(--color-dark-link);
   text-decoration-color: var(--color-dark-link);
 }

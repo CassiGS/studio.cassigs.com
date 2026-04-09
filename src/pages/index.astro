@@ -12,13 +12,23 @@ import SocialLinks from "../components/SocialLinks.astro";
   <SeoPage slot="head" />
   <div>
     <Introduction />
-    <div class="prose dark:prose-invert prose-neutral my-12"><hr /></div>
+    <div class="prose dark:prose-invert prose-neutral divider"><hr /></div>
     <Posts />
-    <div class="mt-12">
+    <div class="section-gap">
       <Projects />
     </div>
-    <div class="mt-12">
+    <div class="section-gap">
       <SocialLinks />
     </div>
   </div>
 </BaseLayout>
+
+<style>
+  .divider {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .section-gap {
+    margin-top: 3rem;
+  }
+</style>

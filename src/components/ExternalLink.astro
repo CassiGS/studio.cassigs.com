@@ -6,12 +6,12 @@ interface Props {
 const { href } = Astro.props;
 ---
 
-<li class="flex items-center gap-1.5">
+<li class="external-link-item">
   <a href={href} class="link" target="_blank" rel="noopener noreferrer">
     <slot />
   </a>
   <svg
-    class="text-muted-text dark:text-dark-muted-text size-4"
+    class="external-icon"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -22,3 +22,19 @@ const { href } = Astro.props;
     ></path></svg
   >
 </li>
+
+<style>
+  .external-link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+  .external-icon {
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-muted-text);
+  }
+  :global(.dark) .external-icon {
+    color: var(--color-dark-muted-text);
+  }
+</style>

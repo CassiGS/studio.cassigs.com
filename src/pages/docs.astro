@@ -7,7 +7,21 @@ import DocsContent from "../content/docs.md";
 <BaseLayout>
   <SeoPage slot="head" title="Docs | Barebones" />
   <h1 class="sr-only">Documentation</h1>
-  <div class="prose dark:prose-invert prose-neutral">
+  <div class="prose dark:prose-invert prose-neutral docs-content">
     <DocsContent />
   </div>
 </BaseLayout>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>
