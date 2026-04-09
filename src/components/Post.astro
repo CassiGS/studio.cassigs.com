@@ -2,6 +2,8 @@
 import type { CollectionEntry } from "astro:content";
 import { formatDate } from "../lib/util";
 
+import { Image } from "astro:assets";
+
 interface Props {
   post: CollectionEntry<"posts">;
 }
@@ -11,6 +13,16 @@ const { post } = Astro.props;
 
 <li>
   <a href={`/posts/${post.id}`} class="post-link">
+    <!-- <img src={post.data.image} /> -->
+      {post.data.image && (
+        <Image
+          src={post.data.image}
+          alt={post.data.imageAlt || ""}
+          class="post-image"
+          draggable="false"
+          loading="eager"
+        />
+        )}
     <span class="link">{post.data.title}</span>
     <div class="post-date">
       {formatDate(post.data.publicationDate)}
@@ -25,13 +37,7 @@ const { post } = Astro.props;
     flex-direction: column;
     text-decoration: none;
   }
-  @media (min-width: 640px) {
-    .post-link {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
+
   .post-date {
     font-size: 0.875rem;
     line-height: 1.25rem;

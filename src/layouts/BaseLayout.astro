@@ -12,12 +12,14 @@ import Navigation from "../components/Navigation.astro";
     <slot name="head" />
   </BaseHead>
   <body>
-    <Navigation />
-    <div class="page-wrapper">
-      <main class="page-main">
-        <slot />
-      </main>
-      <Footer />
+    <div class="app-layout">
+      <Navigation />
+      <div class="content-area">
+        <main class="page-main">
+          <slot />
+        </main>
+        <Footer />
+      </div>
     </div>
   </body>
 </html>
@@ -33,14 +35,29 @@ import Navigation from "../components/Navigation.astro";
 </style>
 
 <style>
-  .page-wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 640px;
+  .app-layout {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+    width: 90%;
+  }
+  @media (min-width: 640px) {
+    .app-layout {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 5rem;
+      min-height: 100vh;
+    }
+  }
+  .content-area {
     padding: 0.75rem;
   }
   @media (min-width: 640px) {
-    .page-wrapper {
+    .content-area {
+      flex: 1;
+      min-width: 0;
+      max-width: 640px;
       padding: 1.5rem;
     }
   }

@@ -5,10 +5,10 @@ import type {
 } from "./types.ts";
 
 export const SITE: SiteConfiguration = {
-  title: "Barebones",
-  description: "A barebones starter theme. Built with Astro, Tailwind CSS, and Markdown.",
-  href: "https://barebones.trevortylerlee.com",
-  author: "Trevor Tyler Lee",
+  title: "CassiGS Studio",
+  description: "A studio art site based on the Barebones template",
+  href: "https://studio.cassigs.com",
+  author: "Cassi Gallagher-Shearer",
   locale: "en-CA",
 };
 
@@ -30,14 +30,10 @@ export const NAV_LINKS: NavigationLinks = {
 export const SOCIAL_LINKS: SocialLinks = {
   email: {
     label: "Email",
-    href: "mailto:ttl@trevortylerlee.com",
+    href: "mailto:ccgall@gmail.com",
   },
   github: {
     label: "GitHub",
-    href: "https://github.com/trevortylerlee",
-  },
-  twitter: {
-    label: "X (formerly Twitter)",
-    href: "https://twitter.com/boogerbuttcheek",
+    href: "https://github.com/CassiGS",
   },
 };
