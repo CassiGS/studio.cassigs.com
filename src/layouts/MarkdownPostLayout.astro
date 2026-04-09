@@ -9,6 +9,7 @@ import ImageTest from '../assets/blog/storybook-scene/img-v1.jpg';
 ---
 
 <Layout>
+	<a class="link" href="/">Back Home</a>
 	<article class="post">
 		<!-- {frontmatter.image && (
 			<div class="feature-image">
@@ -43,5 +44,14 @@ import ImageTest from '../assets/blog/storybook-scene/img-v1.jpg';
 
 	.post-body {
 		max-width: 720px;
+	}
+
+	.post-body :global(img) {
+		height: 100%;
+	}
+
+	.post-body :global(p) {
+		margin: 1rem 0px;
+    	line-height: 160%;
 	}
 </style>
