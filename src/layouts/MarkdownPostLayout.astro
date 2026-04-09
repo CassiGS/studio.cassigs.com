@@ -1,0 +1,47 @@
+---
+import Layout from './Layout.astro';
+import { Image } from 'astro:assets';
+
+const { frontmatter } = Astro.props;
+import ImageTest from '../assets/blog/storybook-scene/img-v1.jpg';
+// const allBlogPosts = await getCollection("blog");
+
+---
+
+<Layout>
+	<article class="post">
+		<!-- {frontmatter.image && (
+			<div class="feature-image">
+				<Image src={frontmatter.image} alt={frontmatter.imageAlt}  width="1000" height="1000" />
+			</div>
+		)} -->
+		<div class="post-body">
+			<slot />
+		</div>
+	</article>
+</Layout>
+
+<style>
+	.post {
+		padding: var(--space-3) 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.feature-image {
+		width: 100%;
+		margin-bottom: var(--space-3);
+	}
+
+	.feature-image img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.post-body {
+		max-width: 720px;
+	}
+</style>
