@@ -1,119 +1,58 @@
-/* ================================
-   Normalizer
-   ================================ */
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	-webkit-text-size-adjust: 100%;
-	tab-size: 4;
-}
-
-body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-	display: block;
-	max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	overflow-wrap: break-word;
-}
-
-ol,
-ul {
-	list-style: none;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-.link {
-	color: var(--color-link);
-	font-weight: 700;
-}
-
-/* ================================
-   Tokens
-   ================================ */
+@import "./typography.css" layer(components);
 
 :root {
-	--color-cream: #EAE1CB;
-	--color-black: #2A2A2A;
-	--color-green: #979E6C;
-	--color-accent: #D2A432;
-	--color-link: #BC6727;
-
-	--font-body: 'Geologica', sans-serif;
-
-	--font-size-1: 0.75rem;   /* 14px */
-	--font-size-2: 1rem;     /* 16px */
-	--font-size-3: 1.5rem;   /* 24px */
-	--font-size-4: 2rem;     /* 32px */
-	--font-size-5: 2.5rem;   /* 40px */
-	--font-size-6: 3rem;     /* 48px */
-	--font-size-7: 3.5rem;   /* 56px */
-
-	--space-1: 0.5rem;   /* 8px */
-	--space-2: 1rem;     /* 16px */
-	--space-3: 1.5rem;   /* 24px */
-	--space-4: 2rem;     /* 32px */
-	--space-5: 2.5rem;   /* 40px */
-	--space-6: 3rem;     /* 48px */
-	--space-7: 3.5rem;   /* 56px */
+  color-scheme: light dark;
+}
+.dark {
+  color-scheme: dark;
+}
+.light {
+  color-scheme: light;
 }
 
-/* ================================
-   Base
-   ================================ */
-
-html {
-	height: 100%;
+@variant dark {
+  &:where(.dark, .dark *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(.system, .system *) {
+      @slot;
+    }
+  }
 }
 
-body {
-	min-height: 100dvh;
-	display: flex;
-	flex-direction: column;
-	background-color: var(--color-cream);
-	color: var(--color-black);
-	font-family: var(--font-body);
+@theme {
+  --color-bg: var(--color-neutral-50);
+  --color-link: oklch(46.97% 0.2734 267.56);
+  --color-muted-text: var(--color-neutral-700);
+
+  --color-dark-bg: var(--color-neutral-950);
+  --color-dark-link: oklch(73.9% 0.1387 282.47);
+  --color-dark-muted-text: var(--color-neutral-300);
 }
 
-.container {
-	flex: 1;
-	width: 90%;
-	max-width: 1400px;
-	margin: var(--space-3) auto 0;
+@theme inline {
+  --font-sans: var(--font-geist);
+}
+
+/* ensure .link and typography.css are consistent */
+.link,
+.prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: var(--color-link);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--color-link);
+  text-decoration-thickness: 1px;
+  & code {
+    font-weight: var(--font-weight-semibold);
+  }
+}
+
+.dark .link,
+.dark
+  .prose
+  :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: var(--color-dark-link);
+  text-decoration-color: var(--color-dark-link);
 }

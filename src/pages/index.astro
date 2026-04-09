@@ -1,123 +1,24 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import Introduction from "../components/Introduction.astro";
+import Posts from "../components/Posts.astro";
+import Projects from "../components/Projects.astro";
+import SeoPage from "../components/SeoPage.astro";
+import SocialLinks from "../components/SocialLinks.astro";
 ---
 
-<Layout>
-	<div class="grid">
-		<section class="main-col">
-			<article class="blog-card">
-				<div class="feature-image"></div>
-				<div class="blog-card-body">
-					<div class="tags">
-						<span class="tag">Design</span>
-						<span class="tag">Studio</span>
-					</div>
-					<h2>Placeholder Blog Post Title Goes Here</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-					<a class="link" href="#">Read More</a>
-				</div>
-			</article>
-		</section>
-		<aside class="side-col">
-			<div class="about-box">
-				<h3>About The Studio</h3>
-				<p>Placeholder text about the studio. More details coming soon.</p>
-				<a class="link" href="#">Read Full Bio</a>
-			</div>
-		</aside>
-	</div>
-</Layout>
-
-<style>
-	.grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: var(--space-3);
-		padding: var(--space-3) 0;
-	}
-
-	.side-col {
-		order: -1;
-	}
-
-	.about-box {
-		background-color: var(--color-green);
-		padding: var(--space-2);
-		display: inline-block;
-		width: 100%;
-	}
-
-	.about-box h3 {
-		font-family: var(--font-body);
-		font-size: var(--font-size-2);
-		font-weight: 300;
-		margin-bottom: var(--space-1);
-		text-transform: uppercase;
-	}
-
-	.about-box p {
-		font-size: var(--font-size-2);
-		font-weight: 200;
-		line-height: 1.6;
-	}
-
-	.about-box a {
-		color: var(--color-cream);
-		background-color: var(--color-link);
-		font-family: var(--font-body);
-		font-size: var(--font-size-1);
-		font-weight: 300;
-		padding: 0.25rem var(--space-1);
-		text-transform: uppercase;
-	}
-
-	.blog-card {
-		border: 1px solid var(--color-black);
-		padding: var(--space-2);
-	}
-
-	.feature-image {
-		width: 100%;
-		aspect-ratio: 16 / 9;
-		background-color: #C0C0C0;
-		margin-bottom: var(--space-2);
-	}
-
-	.tags {
-		display: flex;
-		gap: var(--space-1);
-		margin-bottom: var(--space-1);
-	}
-
-	.tag {
-		background-color: var(--color-accent);
-		font-family: var(--font-body);
-		font-size: var(--font-size-1);
-		font-weight: 300;
-		padding: 0.25rem var(--space-1);
-		text-transform: uppercase;
-	}
-
-	.blog-card-body h2 {
-		font-family: var(--font-body);
-		font-size: var(--font-size-4);
-		font-weight: 300;
-		margin-bottom: var(--space-1);
-	}
-
-	.blog-card-body p {
-		font-size: var(--font-size-2);
-		font-weight: 200;
-		line-height: 1.6;
-	}
-
-	@media (min-width: 768px) {
-		.grid {
-			grid-template-columns: 3fr 1fr;
-		}
-
-		.side-col {
-			order: 0;
-		}
-	}
-</style>
+<BaseLayout>
+  <SeoPage slot="head" />
+  <div>
+    <Introduction />
+    <div class="prose dark:prose-invert prose-neutral my-12"><hr /></div>
+    <Posts />
+    <div class="mt-12">
+      <Projects />
+    </div>
+    <div class="mt-12">
+      <SocialLinks />
+    </div>
+  </div>
+</BaseLayout>
