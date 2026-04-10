@@ -22,14 +22,16 @@ const { post } = Astro.props;
           loading="eager"
         />
       )}
-      <div>
+      <div class="post-info">
         <div class="post-date">
           {formatDate(post.data.publicationDate)}
         </div>
-        <span class="post-title">{post.data.title}</span>
-        <p>{post.data.description}</p>
+        <div class="post-text">
+          <span class="post-title">{post.data.title}</span>
+          <p>{post.data.description}</p>
+        </div>
+        <span class="link">Read More</span>
       </div>
-      <a href={`/posts/${post.id}`} class="link">Read More</a>
   </a>
 </li>
 
@@ -39,13 +41,14 @@ const { post } = Astro.props;
     padding: .5rem;
     border: 1px solid var(--color-dark);
   }
-  .post-link {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    text-decoration: none;
 
-    gap: 1rem;
+  .post-link {
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .post-link:hover .link {
+    color: var(--color-dark);
   }
 
   :global(.dark) .post-link {
@@ -66,5 +69,15 @@ const { post } = Astro.props;
   }
   :global(.dark) .post-date {
     color: var(--color-dark-muted-text);
+  }
+
+  .post-info {
+    display: flex;
+    flex-direction: column;
+    margin: .75rem 0 .25rem;
+  }
+
+  .post-text {
+    margin: .25rem 0 .75rem 0;
   }
 </style>
