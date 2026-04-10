@@ -11,7 +11,7 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<li>
+<li class="post-item">
   <a href={`/posts/${post.id}`} class="post-link">
       {post.data.image && (
         <Image
@@ -23,27 +23,39 @@ const { post } = Astro.props;
         />
       )}
       <div>
-        <span class="link">{post.data.title}</span>
         <div class="post-date">
           {formatDate(post.data.publicationDate)}
         </div>
+        <span class="post-title">{post.data.title}</span>
+        <p>{post.data.description}</p>
       </div>
+      <a href={`/posts/${post.id}`} class="link">Read More</a>
   </a>
 </li>
 
 <style>
+
+  .post-item {
+    padding: .5rem;
+    border: 1px solid var(--color-dark);
+  }
   .post-link {
     display: flex;
     width: 100%;
     flex-direction: column;
     text-decoration: none;
-    padding: .5rem;
-    border: 1px solid var(--color-dark);
+
     gap: 1rem;
   }
 
   :global(.dark) .post-link {
       border: 1px solid var(--color-bg);
+  }
+
+  .post-title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
   }
 
   .post-date {
