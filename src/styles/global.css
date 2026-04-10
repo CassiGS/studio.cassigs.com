@@ -2,11 +2,11 @@
 
 :root {
   color-scheme: light dark;
-  --color-bg: #fafafa;
-  --color-link: oklch(46.97% 0.2734 267.56);
+  --color-bg: #f9f6ef;
+  --color-dark: #282828;
+  --color-link: #193497;
   --color-muted-text: #404040;
-  --color-dark-bg: #0a0a0a;
-  --color-dark-link: oklch(73.9% 0.1387 282.47);
+  --color-dark-link: #eda398;
   --color-dark-muted-text: #d4d4d4;
   --font-sans: var(--font-geist, ui-sans-serif, system-ui, sans-serif);
   --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
@@ -30,15 +30,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: var(--color-link);
-  text-decoration-thickness: 1px;
+  text-decoration: none;
 }
 .link code {
   font-weight: 600;
+}
+
+.link:hover {
+   color: var(--color-dark);
 }
 
 .dark .link,
 .dark .prose :where(a):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
   color: var(--color-dark-link);
   text-decoration-color: var(--color-dark-link);
+}
+
+.dark .link:hover {
+  color: var(--color-bg);
 }

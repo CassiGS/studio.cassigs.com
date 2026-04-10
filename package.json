@@ -12,6 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.5"
+    "astro": "^6.1.5",
+    "devalue": "^5.7.1",
+    "html-escaper": "^3.0.3"
   }
 }
