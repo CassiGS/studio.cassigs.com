@@ -7,6 +7,13 @@ import react from '@astrojs/react';
 export default defineConfig({
     site: "https://studio.cassigs.com",
     integrations: [react()],
+      vite: {
+    build: {
+      rollupOptions: {
+        external: ['@astrojs/rss'],
+      },
+    },
+  },
 
 });
 
