@@ -1,9 +1,9 @@
 ---
-title: The Metamorphosis (1915)
-description: A salesman wakes up and finds himself transformed into an insect.
-publicationDate: 2024-08-03
-image: "./metamorphosis.jpg"
-imageAlt: Eggs, larva, pupa, adult.
+title: Storybook Scene
+description: Learning about panting scenes with ByDylanM
+publicationDate: 2026-04-18
+image: "./feature-image.JPG"
+imageAlt: cottage, woods, sheep
 ---
 
 ## 1.

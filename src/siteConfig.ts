@@ -17,13 +17,13 @@ export const NAV_LINKS: NavigationLinks = {
     path: "/posts",
     label: "Posts",
   },
-  projects: {
-    path: "/projects",
-    label: "Projects",
-  },
+  // projects: {
+  //   path: "/projects",
+  //   label: "Projects",
+  // },
   documentation: {
-    path: "/docs",
-    label: "Documentation",
+    path: "/about",
+    label: "About",
   },
 };
 
@@ -32,8 +32,8 @@ export const SOCIAL_LINKS: SocialLinks = {
     label: "Email",
     href: "mailto:ccgall@gmail.com",
   },
-  github: {
-    label: "GitHub",
-    href: "https://github.com/CassiGS",
+  instagram: {
+    label: "Instagram",
+    href: "https://www.instagram.com/cassigs_studio/",
   },
 };

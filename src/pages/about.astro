@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SeoPage from "../components/SeoPage.astro";
+import AboutContent from "../content/about/about.md"
+
+---
+
+<BaseLayout>
+  <SeoPage slot="head" title="About | CassiGS Studio" />
+  <h1>About</h1>
+  <div class="prose dark:prose-invert ">
+    <AboutContent />
+  </div>
+</BaseLayout>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>
