@@ -8,7 +8,7 @@ imageAlt: watercolor florals
 
 ## Begin Again
 
-Recently, I've been making an effort to take mare art more seriously. I was laid from my web development job in November, and the time off and job search have given me a lot of time to think about how I want to be spending my time in this world. I have a lot of hobbies and I've explored a lot of them on and off over time, but the one I've always come back to is art and illustration.
+Recently, I've been making an effort to take my art more seriously. I was laid off from my web development job in November, and the time off and job search have given me a lot of time to think about how I want to be spending my time in this world. I have a lot of hobbies and I've explored a lot of them on and off over time, but the one I've always come back to is art and illustration.
 
 ## Botanicals, Part 1
 
@@ -24,14 +24,14 @@ I even got a couple of commissions from some friends. Nothing big, but it was ni
 
 ## Burnout
 
-After a while, due to pandemic burnout and a host of other reasons, I started to get burnt out on the botanicals too. I had also rediscovered crocheting, another past love of mine, learned how to knit - and fell into a knitting and crocheting rabbit hole, and once again drawing took a back burner.
+After a while, due to pandemic burnout and a host of other reasons, I started to get burnt out on the botanicals too. I had also rediscovered crocheting, another past love of mine, learned how to knit — and fell into a knitting and crocheting rabbit hole, and once again drawing took a back seat.
 
 ## There And Back Again
 
-And now I find myself in another moment of pause. Another declaration that nothing in life is guarenteed. And this time I'm exploring once again what it would mean for art to be back in my life. I think I've never taken art seriously before because I never knew what it meant to take it seriously. I think in the past I've thought I could only do that if I were planning to make it a job, to legitimzie it in some way. But now I'm realizing that taking it seriously can be something as simple as an energy shift. A change of focus. Just leaning towards a creative practice a little more.
+And now I find myself in another moment of pause. Another declaration that nothing in life is guaranteed. And this time I'm exploring once again what it would mean for art to be back in my life. I think I've never taken art seriously before because I never knew what it meant to take it seriously. I think in the past I've thought I could only do that if I were planning to make it a job, to legitimize it in some way. But now I'm realizing that taking it seriously can be something as simple as an energy shift. A change of focus. Just leaning towards a creative practice a little more.
 
 ![A watercolor painting of a tulip](./botanicals-3.jpeg)
 
-I want to make are first and then see where it takes me. So here I am again, 6 years later rexploring botanicals, along with other subjects, mediums, what-have-you. I want to begin once again, shift my focus, and maybe see where that takes me.
+I want to make art first and then see where it takes me. So here I am again, 6 years later re-exploring botanicals, along with other subjects, mediums, what-have-you. I want to begin once again, shift my focus, and maybe see where that takes me.
 
 ![A watercolor painting of a tulip](./botanicals-4.jpeg)
