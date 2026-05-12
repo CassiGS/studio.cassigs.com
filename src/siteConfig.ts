@@ -17,6 +17,10 @@ export const NAV_LINKS: NavigationLinks = {
     path: "/posts",
     label: "Posts",
   },
+  portfolio: {
+    path: "/portfolio",
+    label: "Portfolio",
+  },
   // projects: {
   //   path: "/projects",
   //   label: "Projects",
