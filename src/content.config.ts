@@ -21,6 +21,10 @@ const portfolio = defineCollection({
     z.object({
       title: z.string(),
       featureImage: z.string(),    // path to the hero image
+      year: z.string().optional(),
+      blogLink: z.string().optional(),
+      client: z.string().optional(),
+      medium: z.string().optional(),
   })
 })
 export const collections = { posts, portfolio };

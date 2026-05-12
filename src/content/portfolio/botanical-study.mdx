@@ -1,6 +1,10 @@
 ---
-title: "My first MDX post"
+title: "Botanical Studies"
 featureImage: "../posts/botanical-study/feature-image.jpeg"
+year: "2026"
+blogLink: "/posts/botanical-study"
+client: "Personal Project"
+medium: "Watercolor & Color Pencil"
 ---
 
 import { Image } from "astro:assets";
@@ -14,12 +18,12 @@ import DuoImg2 from "../posts/botanical-study/botanicals-4.jpeg";
 <Image src={featureImage} alt="Watercolor Botanicals" />
 
 <ProjectMeta
-  title="Botanical Studies"
+  title={frontmatter.title}
   summary="A series of observational studies exploring plant forms through watercolour and color pencil."
-  year={2026}
-  blogLink={"/posts/botanical-study"}
-  client="Personal Project"
-  medium="Watercolor & Color Pencil"
+  year={frontmatter.year}
+  blogLink={frontmatter.blogLink}
+  client={frontmatter.client}
+  medium={frontmatter.medium}
 />
 
 <TwoColumnImage src1={DuoImg1} src2={DuoImg2} alt1="" alt2="" />
