@@ -17,8 +17,10 @@ const posts = defineCollection({
 
 const portfolio = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/portfolio" }),
-  schema: z.object({
-    title: z.string(),
+  schema: () =>
+    z.object({
+      title: z.string(),
+      featureImage: z.string(),    // path to the hero image
   })
 })
 export const collections = { posts, portfolio };
