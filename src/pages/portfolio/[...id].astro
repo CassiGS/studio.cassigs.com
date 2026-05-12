@@ -1,20 +1,18 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
-import { Image } from "astro:assets";
+// import { Image } from "astro:assets";
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
 import SeoPost from "../../components/SeoPost.astro";
-
-import { formatDate } from "../../lib/util";
 
 
 interface Props {
-  entry: CollectionEntry<"posts">;
+  entry: CollectionEntry<"portfolio">;
 }
 
 export async function getStaticPaths() {
-  const posts = await getCollection("posts");
+  const posts = await getCollection("portfolio");
+  console.log('POSTS', posts)
   return posts.map((entry) => ({
     params: { id: entry.id },
     props: { entry },
@@ -22,41 +20,18 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
-console.log("HELLOOOOO")
+console.log("HELLLOOOO")
 ---
 
 <BaseLayout>
   <SeoPost slot="head" entry={entry} />
-  <div>
-    {
-      entry.data.image && (
-        <Image
-          src={entry.data.image}
-          alt={entry.data.imageAlt || ""}
-          class="post-image"
-          draggable="false"
-          loading="eager"
-        />
-      )
-    }
     <h1 class="post-title">
       {entry.data.title}
     </h1>
-    <p class="post-date">
-      {formatDate(entry.data.publicationDate)}
-    </p>
-    <div class="prose dark:prose-invert prose-neutral">
-      <hr class="post-divider" />
-      <div>
-        <Content />
-      </div>
-      <hr class="post-divider" />
-    </div>
   </div>
 </BaseLayout>
 
-<style>
+<!-- <style>
   .post-image {
     margin-bottom: 3rem;
     height: auto;
@@ -83,4 +58,4 @@ console.log("HELLOOOOO")
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
-</style>
+</style> -->

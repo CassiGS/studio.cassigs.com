@@ -12,12 +12,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/mdx": "^5.0.4",
     "@astrojs/react": "^5.0.3",
+    "@astrojs/rss": "^4.0.0",
     "astro": "^6.1.5",
     "devalue": "^5.7.1",
-    "html-escaper": "^3.0.3",
-    "@astrojs/rss": "^4.0.0"
-
+    "html-escaper": "^3.0.3"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",

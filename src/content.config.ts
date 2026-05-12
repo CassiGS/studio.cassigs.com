@@ -15,18 +15,10 @@ const posts = defineCollection({
     }),
 });
 
-const projects = defineCollection({
-  loader: glob({
-    pattern: "**/[^_]*.{md,mdx}",
-    base: "./src/content/projects",
-  }),
-  schema: () =>
-    z.object({
-      title: z.string(),
-      description: z.string(),
-      publicationDate: z.date().optional(),
-      href: z.string(),
-    }),
-});
-
-export const collections = { posts, projects };
+const portfolio = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/portfolio" }),
+  schema: z.object({
+    title: z.string(),
+  })
+})
+export const collections = { posts, portfolio };
