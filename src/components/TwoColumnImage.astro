@@ -1,0 +1,31 @@
+---
+interface Props {
+  src1: string;
+  alt1?: string;
+  src2: string;
+  alt2?: string;
+}
+
+import { Image } from "astro:assets";
+
+const { src1, alt1 = "", src2, alt2 = "" } = Astro.props;
+---
+
+<div class="two-col">
+  <Image src={src1} alt={alt1} />
+  <Image src={src2} alt={alt2} />
+</div>
+
+<style>
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .two-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>

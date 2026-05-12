@@ -1,0 +1,25 @@
+---
+title: "My first MDX post"
+featureImage: "../posts/botanical-study/feature-image.jpeg"
+---
+
+import { Image } from "astro:assets";
+import ProjectMeta from "../../components/ProjectMeta.astro";
+import TwoColumnImage from "../../components/TwoColumnImage.astro";
+
+import featureImage from "../posts/botanical-study/feature-image.jpeg";
+import DuoImg1 from "../posts/botanical-study/botanicals-3.jpeg";
+import DuoImg2 from "../posts/botanical-study/botanicals-4.jpeg";
+
+<Image src={featureImage} alt="Watercolor Botanicals" />
+
+<ProjectMeta
+  title="Botanical Studies"
+  summary="A series of observational studies exploring plant forms through watercolour and color pencil."
+  year={2026}
+  blogLink={"/posts/botanical-study"}
+  client="Personal Project"
+  medium="Watercolor & Color Pencil"
+/>
+
+<TwoColumnImage src1={DuoImg1} src2={DuoImg2} alt1="" alt2="" />

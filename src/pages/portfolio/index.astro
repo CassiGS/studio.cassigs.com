@@ -12,8 +12,6 @@ const allImages = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 function resolveImage(featureImage: string): ImageMetadata | undefined {
-  // featureImage is stored relative to src/content/portfolio/ (e.g. "../posts/foo/bar.jpg")
-  // glob keys are relative to this file at src/pages/portfolio/
   const key = featureImage.replace("../posts/", "../../content/posts/");
   return allImages[key]?.default;
 }
@@ -39,11 +37,6 @@ function resolveImage(featureImage: string): ImageMetadata | undefined {
     columns: 2;
     column-gap: 1rem;
     margin-top: 1.5rem;
-  }
-  @media (min-width: 640px) {
-    .grid {
-      columns: 3;
-    }
   }
   .grid a {
     display: block;

@@ -1,61 +1,38 @@
 ---
 import { type CollectionEntry, getCollection, render } from "astro:content";
-// import { Image } from "astro:assets";
-
+import { Image } from "astro:assets";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import SeoPost from "../../components/SeoPost.astro";
-
+import SeoPage from "../../components/SeoPage.astro";
 
 interface Props {
   entry: CollectionEntry<"portfolio">;
 }
 
 export async function getStaticPaths() {
-  const posts = await getCollection("portfolio");
-  console.log('POSTS', posts)
-  return posts.map((entry) => ({
+  const entries = await getCollection("portfolio");
+  return entries.map((entry) => ({
     params: { id: entry.id },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-console.log("HELLLOOOO")
+const { Content } = await render(entry);
+
+const allImages = import.meta.glob<{ default: ImageMetadata }>(
+  "../../content/posts/**/*.{jpg,jpeg,JPG,JPEG,png,PNG}",
+  { eager: true }
+);
+
+function resolveImage(featureImage: string): ImageMetadata | undefined {
+  const key = featureImage.replace("../posts/", "../../content/posts/");
+  return allImages[key]?.default;
+}
+
+const featureImg = entry.data.featureImage ? resolveImage(entry.data.featureImage) : undefined;
 ---
 
 <BaseLayout>
-  <SeoPost slot="head" entry={entry} />
-    <h1 class="post-title">
-      {entry.data.title}
-    </h1>
-  </div>
+  <SeoPage slot="head" title={`${entry.data.title} | CassiGS Studio`} />
+  <Content />
 </BaseLayout>
-
-<!-- <style>
-  .post-image {
-    margin-bottom: 3rem;
-    height: auto;
-    width: 100%;
-  }
-  .post-title {
-    font-size: 36px;
-    line-height: 1.375;
-    font-weight: 700;
-    text-wrap: balance;
-    color: #000;
-  }
-  :global(.dark) .post-title {
-    color: #fff;
-  }
-  .post-date {
-    margin-top: 0.75rem;
-    color: var(--color-muted-text);
-  }
-  :global(.dark) .post-date {
-    color: var(--color-dark-muted-text);
-  }
-  .post-divider {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-</style> -->
