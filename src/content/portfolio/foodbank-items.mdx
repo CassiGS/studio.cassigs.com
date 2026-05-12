@@ -1,0 +1,29 @@
+---
+title: "Foodbank Illustrations"
+featureImage: "../posts/foodbank-illutrations/foodbank-1.JPG"
+year: "2026"
+blogLink: "/posts/foodbank-illutrations"
+client: "Personal Project"
+medium: "Digital"
+---
+
+import { Image } from "astro:assets";
+import ProjectMeta from "../../components/ProjectMeta.astro";
+import TwoColumnImage from "../../components/TwoColumnImage.astro";
+
+import featureImage from "../posts/foodbank-illutrations/foodbank-1.JPG";
+import DuoImg1 from "../posts/foodbank-illutrations/foodbank-2.JPG";
+import DuoImg2 from "../posts/foodbank-illutrations/foodbank-3.JPG";
+
+<Image src={featureImage} alt="Watercolor Botanicals" />
+
+<ProjectMeta
+  title={frontmatter.title}
+  summary="A series of observational food illutrations done in a flatlay style"
+  year={frontmatter.year}
+  blogLink={frontmatter.blogLink}
+  client={frontmatter.client}
+  medium={frontmatter.medium}
+/>
+
+<TwoColumnImage src1={DuoImg1} src2={DuoImg2} alt1="" alt2="" />
