@@ -16,7 +16,7 @@ After a stint filling in for folks who called out, I snagged a weekly shift on M
 
 My job every week is to come in and see what items we're putting out for the day. Typically it's based on donations, what's available in the warehouse, and whatever schedule the food bank coordinators have worked out for the week. I get a list of items and their locations on the floor, and I begin my daily treasure hunt.
 
-![A picture of a flower in a white frame](./foodbank-2.jpg)
+![A flatlay of grocery items in digital illustration](./foodbank-2.JPG)
 
 ## The treasure hunt
 
@@ -26,7 +26,7 @@ Some days are really exciting — we get miscellaneous items through general don
 
 The biggest thing I learned about our food bank is that they buy their own food. Donations go towards purchasing food to help ensure that each week the grocery service has good quality staple items, in addition to the miscellaneous donations. So if you're feeling generous and want to support your local food bank — a monetary donation can go a long way, and in some ways further than a food donation.
 
-![A picture of a flower in a white frame](./foodbank-3.jpg)
+![A flatlay of grocery items in digital illustration](./foodbank-3.JPG)
 
 ## Grocery Flatlays
 
