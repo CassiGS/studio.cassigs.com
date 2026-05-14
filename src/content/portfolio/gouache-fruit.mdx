@@ -1,0 +1,25 @@
+---
+title: "Gouache Fruit"
+featureImage: "../posts/digital-gouache-fruit/final.JPG"
+year: "2026"
+blogLink: "/posts/digital-gouache-fruit"
+client: "Personal Project"
+medium: "Digital"
+---
+
+import { Image } from "astro:assets";
+import ProjectMeta from "../../components/ProjectMeta.astro";
+import TwoColumnImage from "../../components/TwoColumnImage.astro";
+
+import featureImage from "../posts/digital-gouache-fruit/final.JPG";";
+
+<Image src={featureImage} alt="Watercolor Botanicals" />
+
+<ProjectMeta
+  title={frontmatter.title}
+  summary="A procreate brush study trying to make art with just one brush, on some fruit subjects."
+  year={frontmatter.year}
+  blogLink={frontmatter.blogLink}
+  client={frontmatter.client}
+  medium={frontmatter.medium}
+/>
