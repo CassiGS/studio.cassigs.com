@@ -14,7 +14,7 @@ When I work, I often times waffle back and forth between analog tools and digita
 
 Of course, the downfall to working digitally is, of course, there is an infinite world of possibility. So many types of brushes, so many color options. I've seen other artists talk about the constraint of a limited pallet, which is something I've started incorporating - finding a pallet to start with and working specifically off of that (sometimes just googling for a couple of colors I want to start with + "pallet" and just finding one that I like if I really just want to work quickly but within constraint).
 
-![Pallete of colors](./colors.JPG)
+![Pallete of colors](./colors.jpg)
 
 But color is one thing. There is also the constraint of which brush do I want to use, what kind of painting or art do I want to make? And even if I find something I want to make, sometimes I feel like I'm not using a brush to its full potential.
 
