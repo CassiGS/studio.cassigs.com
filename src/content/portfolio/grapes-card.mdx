@@ -1,0 +1,25 @@
+---
+title: "Thanks a bunch"
+featureImage: "../posts/grapes-card/blog-cover.JPG"
+year: "2026"
+blogLink: "/posts/grapes-card"
+client: "Personal Project"
+medium: "Digital"
+---
+
+import { Image } from "astro:assets";
+import ProjectMeta from "../../components/ProjectMeta.astro";
+import TwoColumnImage from "../../components/TwoColumnImage.astro";
+
+import featureImage from "../posts/grapes-card/blog-cover.JPG";
+
+<Image src={featureImage} alt="Thanks a bunch" />
+
+<ProjectMeta
+  title={frontmatter.title}
+  summary="A greeting card concept"
+  year={frontmatter.year}
+  blogLink={frontmatter.blogLink}
+  client={frontmatter.client}
+  medium={frontmatter.medium}
+/>
