@@ -1,7 +1,7 @@
 ---
 title: Thanks a Bunch
 description: Fruit puns and productive procrastination
-publicationDate: 2026-06-29
+publicationDate: 2026-05-29
 image: "./blog-cover.JPG"
 imageAlt: A digital painting of a greeting card with grapes that says Thanks a bunch
 ---
