@@ -10,6 +10,7 @@ medium: "Watercolor & Color Pencil"
 import { Image } from "astro:assets";
 import ProjectMeta from "../../components/ProjectMeta.astro";
 import TwoColumnImage from "../../components/TwoColumnImage.astro";
+import SingleImage from "../../components/SingleImage.astro";
 
 import featureImage from "../posts/bloom-study/bloom-1-webedit.jpg";
 import DuoImg0 from "../posts/bloom-study/bloom-0-webedit.jpg";
@@ -27,4 +28,11 @@ import DuoImg2 from "../posts/bloom-study/wilt-1-webedit.jpg";
   medium={frontmatter.medium}
 />
 
-<TwoColumnImage src1={DuoImg1} src2={DuoImg2} alt1="" alt2="" />
+<TwoColumnImage
+  src1={DuoImg0}
+  src2={DuoImg1}
+  alt1="A pre-bloom Stargazer Lily"
+  alt2="The Stargazer in full bloom - just starting to wilt"
+/>
+
+<SingleImage src1={DuoImg2} alt1="A wilted Stargazer Lily" />
