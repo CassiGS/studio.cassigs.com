@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 
@@ -14,4 +14,16 @@ export default defineConfig({
       },
     },
   },
+  fonts: [{
+    provider: fontProviders.local(),
+    name: "TayBarro",
+    cssVariable: "--font-tay-barro",
+    options: {
+      variants: [{
+        src: ['./src/assets/fonts/TAYBarro.woff2'],
+        weight: 'normal',
+        style: 'normal'
+      }]
+    }
+  }]
 });

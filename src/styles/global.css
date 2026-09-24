@@ -10,7 +10,6 @@
   --color-dark-muted-text: #d4d4d4;
   --font-sans: var(--font-geist, ui-sans-serif, system-ui, sans-serif);
   --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
-  --font-heading: "Montagu Slab", Georgia, serif;
 }
 
 .dark {
@@ -21,7 +20,7 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
+  font-family: var(--font-tay-barro);
 }
 
 .link,
