@@ -2,6 +2,8 @@ import type {
   SiteConfiguration,
   NavigationLinks,
   SocialLinks,
+  Contact,
+  ContactLinks,
 } from "./types.ts";
 
 export const SITE: SiteConfiguration = {
@@ -32,12 +34,19 @@ export const NAV_LINKS: NavigationLinks = {
 };
 
 export const SOCIAL_LINKS: SocialLinks = {
-  email: {
-    label: "Email",
-    href: "mailto:ccgall@gmail.com",
-  },
   instagram: {
     label: "Instagram",
     href: "https://www.instagram.com/cassigs_studio/",
   },
+  newsletter: {
+    label: "Newsletter",
+    href: "https://cassigs.substack.com/"
+  }
 };
+
+export const CONTACT: ContactLinks = {
+  email: {
+    label: "Email",
+    href: "mailto:studio@cassigs.com",
+  },
+}

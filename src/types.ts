@@ -19,6 +19,15 @@ export type SocialLinks = {
   [key: string]: SocialLink;
 };
 
+export type ContactLinks = {
+  [key: string]: Contact;
+};
+
+export type Contact = {
+  label: string;
+  href: string;
+};
+
 export type SocialLink = {
   label: string;
   href: string;

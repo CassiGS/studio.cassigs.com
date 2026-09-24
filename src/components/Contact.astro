@@ -1,18 +1,18 @@
 ---
-import { SOCIAL_LINKS } from "../siteConfig";
+import { CONTACT } from "../siteConfig";
 
 import ExternalLink from "./ExternalLink.astro";
 ---
 
 <section>
   <div class="prose dark:prose-invert prose-neutral section-heading">
-    <h2>Connect</h2>
+    <h2>Contact</h2>
   </div>
   <ul class="social-list">
     {
-      Object.values(SOCIAL_LINKS).map((socialLink) => {
+      Object.values(CONTACT).map((contact) => {
         return (
-          <ExternalLink href={socialLink.href}>{socialLink.label}</ExternalLink>
+          <ExternalLink href={contact.href}>{contact.label}</ExternalLink>
         );
       })
     }
