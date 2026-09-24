@@ -2,7 +2,7 @@
 title: Never Half-Ass Two Things Lettered Quote
 description: A digial hand-lettered illustration
 publicationDate: 2026-08-23
-image: "./half-ass.JPG"
+image: "./half-ass.jpg"
 imageAlt: A digital painting of a hand-lettered poster that says "Never Half Ass Two Things, Whole Ass One Thing"
 ---
 
