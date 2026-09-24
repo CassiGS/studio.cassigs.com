@@ -1,0 +1,24 @@
+---
+title: "Put Some Pep In Your Step"
+featureImage: "../posts/pep-step/pep-step.jpg"
+year: "2026"
+client: "Personal Project"
+blogLink: "/posts/pep-step"
+medium: "Digital"
+---
+
+import { Image } from "astro:assets";
+import ProjectMeta from "../../components/ProjectMeta.astro";
+
+import featureImage from "../posts/pep-step/pep-step.jpg"git;
+
+<Image src={featureImage} alt="Thanks a bunch" />
+
+<ProjectMeta
+  title={frontmatter.title}
+  summary="A hand-lettered illustration"
+  year={frontmatter.year}
+  blogLink={frontmatter.blogLink}
+  client={frontmatter.client}
+  medium={frontmatter.medium}
+/>
