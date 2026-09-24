@@ -23,7 +23,6 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-console.log("HELLOOOOO")
 ---
 
 <BaseLayout>
@@ -44,7 +43,7 @@ console.log("HELLOOOOO")
       {entry.data.title}
     </h1>
     <p class="post-date">
-      {formatDate(entry.data.publicationDate)}
+      Posted On: {formatDate(entry.data.publicationDate)}
     </p>
     <div class="prose dark:prose-invert prose-neutral">
       <hr class="post-divider" />
@@ -80,7 +79,7 @@ console.log("HELLOOOOO")
     color: var(--color-dark-muted-text);
   }
   .post-divider {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 </style>

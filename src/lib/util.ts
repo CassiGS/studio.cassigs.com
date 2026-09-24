@@ -10,9 +10,9 @@ export function formatDate(
   locale: string = SITE.locale,
 ): string {
   const defaultOptions: Intl.DateTimeFormatOptions = {
-    year: "numeric",
-    month: "numeric",
+    month: "short",
     day: "numeric",
+    year: "numeric",
   };
 
   const formatOptions = { ...defaultOptions, ...options };

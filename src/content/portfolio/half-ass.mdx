@@ -1,0 +1,24 @@
+---
+title: "Never Half Ass Two Things"
+featureImage: "../posts/half-ass/half-ass.jpg"
+year: "2026"
+client: "Personal Project"
+blogLink: "/posts/half-ass"
+medium: "Digital"
+---
+
+import { Image } from "astro:assets";
+import ProjectMeta from "../../components/ProjectMeta.astro";
+
+import featureImage from "../posts/half-ass/half-ass.jpg";
+
+<Image src={featureImage} alt="Thanks a bunch" />
+
+<ProjectMeta
+  title={frontmatter.title}
+  summary="A hand-lettered illustration"
+  year={frontmatter.year}
+  blogLink={frontmatter.blogLink}
+  client={frontmatter.client}
+  medium={frontmatter.medium}
+/>
